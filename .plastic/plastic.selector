@@ -1,0 +1,4 @@
+repository "Boobman@wechat_os_qy0wjwildkfejxiciee95fz7g@cloud.cn"
+  path "/"
+    br "/main"
+    co "/main"
