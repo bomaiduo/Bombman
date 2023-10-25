@@ -4,17 +4,26 @@ using UnityEngine;
 
 public class HitPoint : MonoBehaviour
 {
+
+    public bool bombAvilable;
+    int dir;
     private void OnTriggerEnter2D(Collider2D other)
     {
+       if (transform.position.x > other.transform.position.x)
+            dir = -1;
+        else
+            dir = 1;
+
        if (other.CompareTag("Player"))
         {
             Debug.Log("hit");
             other.GetComponent<IDamageable>().GetHit(1);
+            other.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(dir, 1) * 10, ForceMode2D.Impulse);
         }
 
-        if (other.CompareTag("Bomb"))
+        if (other.CompareTag("Bomb") && bombAvilable)
         {
-
+            other.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(dir,1)*10,ForceMode2D.Impulse);
         }
     }
 }
