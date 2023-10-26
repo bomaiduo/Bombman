@@ -60,7 +60,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: BaldPirate_attack
+  m_Name: BigGuy_attack
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -74,7 +74,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: f63e52c90eb23594f80bd19e90e17b59, type: 2}
+  m_Motion: {fileID: 7400000, guid: 50e91fcf7291b4141971e639e1954f21, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -165,7 +165,7 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: -653307751903075928}
-    m_Position: {x: 270, y: 110, z: 0}
+    m_Position: {x: 260, y: 120, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 8029094128192687113}
     m_Position: {x: 270, y: 30, z: 0}
@@ -222,7 +222,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: ed9f5075b525b5341aa0223c3504cddc, type: 2}
+  m_Motion: {fileID: 7400000, guid: c9e7281c7aba12a4dbd855d24d079880, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -260,7 +260,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: BaldPirate_hit
+  m_Name: BigGuy_hit
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -275,7 +275,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 19f34c1f57d586f4fbc57f386b628a86, type: 2}
+  m_Motion: {fileID: 7400000, guid: b550ad1c0648b8649985378a29f9ee1b, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -491,7 +491,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: BaldPirate_run
+  m_Name: BigGuy_run
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -507,7 +507,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 4a84cf3bdbc1ac34d9686152e938f5ed, type: 2}
+  m_Motion: {fileID: 7400000, guid: 1bb598ddefee63540a9c4f07bc05028b, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -572,7 +572,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: BaldPirate_dead
+  m_Name: BigGuy_dead
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -585,7 +585,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: e6ffeb7abfec8c746a61d2b433b18f0b, type: 2}
+  m_Motion: {fileID: 7400000, guid: f11cf505fd26b4746ab7581107ae7e52, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -645,7 +645,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: BaldPirate_run
+  m_Name: BigGuy_run
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -659,7 +659,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 4a84cf3bdbc1ac34d9686152e938f5ed, type: 2}
+  m_Motion: {fileID: 7400000, guid: 1bb598ddefee63540a9c4f07bc05028b, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
