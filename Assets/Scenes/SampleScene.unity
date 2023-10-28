@@ -3289,8 +3289,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bombAvilable: 1
---- !u!58 &1351459494
-CircleCollider2D:
+--- !u!61 &1351459494
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -3321,9 +3321,19 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.49841213, y: 0.22081566}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Size: {x: 1.0504713, y: 0.49527836}
+  m_EdgeRadius: 0
 --- !u!1 &1361723753
 GameObject:
   m_ObjectHideFlags: 0
@@ -3861,7 +3871,7 @@ GameObject:
   - component: {fileID: 1756255420}
   - component: {fileID: 1756255419}
   - component: {fileID: 1756255418}
-  - component: {fileID: 1756255417}
+  - component: {fileID: 1756255422}
   m_Layer: 10
   m_Name: Sprite Setting
   m_TagString: Player
@@ -3887,30 +3897,6 @@ Transform:
   - {fileID: 1351459492}
   m_Father: {fileID: 1223560764}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1756255417
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1756255415}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9929043058d0184db6c25ec59fa7b45, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  anim: {fileID: 0}
-  animState: 0
-  health: 3
-  isDead: 0
-  speed: 2
-  pointA: {fileID: 1180935849}
-  pointB: {fileID: 1811289228}
-  targetPoint: {fileID: 0}
-  attackRate: 2
-  attackRange: 1
-  skillRange: 1.5
-  attackList: []
 --- !u!95 &1756255418
 Animator:
   serializedVersion: 5
@@ -4056,6 +4042,30 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1756255422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1756255415}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ece7ccc80eed6a240b157ba641b4721b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 0}
+  animState: 0
+  health: 3
+  isDead: 0
+  speed: 2
+  pointA: {fileID: 1180935849}
+  pointB: {fileID: 1811289228}
+  targetPoint: {fileID: 0}
+  attackRate: 2
+  attackRange: 1
+  skillRange: 1.5
+  attackList: []
 --- !u!1 &1805530426
 GameObject:
   m_ObjectHideFlags: 0
