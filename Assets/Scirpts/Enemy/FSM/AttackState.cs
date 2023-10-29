@@ -23,7 +23,7 @@ public class AttackState : EnemyBaseState
             for (int i = 0; i < enemy.attackList.Count; i++)
             {
                 if (Mathf.Abs(enemy.transform.position.x - enemy.attackList[i].position.x) <
-                    Mathf.Abs(enemy.transform.position.x - enemy.targetPoint.position.x)) ;
+                    Mathf.Abs(enemy.transform.position.x - enemy.targetPoint.position.x))
                 {
                     enemy.targetPoint = enemy.attackList[i];
                 }
