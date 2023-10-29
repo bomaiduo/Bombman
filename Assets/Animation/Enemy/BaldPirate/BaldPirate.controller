@@ -79,7 +79,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Cucumber_run
+  m_Name: BaldPirate_run
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -95,7 +95,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 8ac2141855b15c840818fe424a8b8d34, type: 2}
+  m_Motion: {fileID: 7400000, guid: 4a84cf3bdbc1ac34d9686152e938f5ed, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -122,7 +122,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 530d47f1fb9f9f1428902fcef0c8c58f, type: 2}
+  m_Motion: {fileID: 7400000, guid: ed9f5075b525b5341aa0223c3504cddc, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -261,7 +261,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Cucumber_run
+  m_Name: BaldPirate_run
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -275,7 +275,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 8ac2141855b15c840818fe424a8b8d34, type: 2}
+  m_Motion: {fileID: 7400000, guid: 4a84cf3bdbc1ac34d9686152e938f5ed, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -292,7 +292,7 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: -4370529852736681371}
-    m_Position: {x: 250, y: 110, z: 0}
+    m_Position: {x: 260, y: 120, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -1349932793831583439}
     m_Position: {x: 250, y: 20, z: 0}
@@ -312,7 +312,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Cucumber
+  m_Name: BaldPirate
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: state
@@ -389,7 +389,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Cucumber_hit
+  m_Name: BaldPirate_hit
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -404,7 +404,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 2be47bd1480f0cb4a915b2cc8a482b86, type: 2}
+  m_Motion: {fileID: 7400000, guid: 19f34c1f57d586f4fbc57f386b628a86, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -439,7 +439,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Cucumber_dead
+  m_Name: BaldParate_dead
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -452,7 +452,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: ee5fc390806aedf47b46d7afd0fca254, type: 2}
+  m_Motion: {fileID: 7400000, guid: e6ffeb7abfec8c746a61d2b433b18f0b, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -515,7 +515,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Cucumber_attack
+  m_Name: BaldPirate_attack
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -529,7 +529,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 4ad7f6fcbfc6416469bb39b5c9f41b72, type: 2}
+  m_Motion: {fileID: 7400000, guid: f63e52c90eb23594f80bd19e90e17b59, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -606,7 +606,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: a9a85a5f5b06bb341818d5c526e84751, type: 2}
+  m_Motion: {fileID: 7400000, guid: f63e52c90eb23594f80bd19e90e17b59, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 

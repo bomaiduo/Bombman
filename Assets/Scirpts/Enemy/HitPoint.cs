@@ -16,7 +16,7 @@ public class HitPoint : MonoBehaviour
 
        if (other.CompareTag("Player"))
         {
-            Debug.Log("hit");
+
             other.GetComponent<IDamageable>().GetHit(1);
             other.gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(dir, 1) * 10, ForceMode2D.Impulse);
         }
