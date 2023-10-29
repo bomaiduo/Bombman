@@ -32,7 +32,7 @@ public class BigGuy : Enemy,IDamageable
         }
     }
 
-    public void ThrowAway() 
+    public void ThrowAway() //Animation Event
     {
         if(hasBomb)
         {
