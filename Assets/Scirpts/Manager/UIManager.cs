@@ -8,6 +8,9 @@ public class UIManager : MonoBehaviour
 
     public GameObject healthBar;
 
+    [Header("UI ELements")]
+    public GameObject pauseMenu;
+
     private void Awake()
     {
         if (Instance == null)
@@ -46,5 +49,19 @@ public class UIManager : MonoBehaviour
                 healthBar.transform.GetChild(2).gameObject.SetActive(false);
                 break;
         }
+    }
+
+    public void PauseGame()
+    {
+        pauseMenu.SetActive(true);
+
+        Time.timeScale = 0;
+    }
+
+    public void ResumeGame()
+    {
+        pauseMenu.SetActive(false);
+
+        Time.timeScale = 1;
     }
 }
