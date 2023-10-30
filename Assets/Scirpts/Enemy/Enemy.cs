@@ -15,6 +15,7 @@ public class Enemy : MonoBehaviour
     public float health;
     public bool isDead;
     public bool hasBomb;
+    public bool isBoss;
 
     [Header("Movement")]
     public float speed;
@@ -46,6 +47,8 @@ public class Enemy : MonoBehaviour
     void Start()
     {
         TransitionToState(patrolState);
+        if(isBoss)
+            UIManager.instance.SetBossHealth(health);
     }
 
     // Update is called once per frame
@@ -57,6 +60,9 @@ public class Enemy : MonoBehaviour
 
         currentState.OnUpdate(this);
         anim.SetInteger( "state", animState);
+
+        if (isBoss)
+            UIManager.instance.UpdateBossHealth(health);
     }
 
     public void TransitionToState(EnemyBaseState state)

@@ -1,20 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
-    public static UIManager Instance;
+    public static UIManager instance;
 
     public GameObject healthBar;
 
     [Header("UI ELements")]
     public GameObject pauseMenu;
+    public Slider bossHealthBar;
 
     private void Awake()
     {
-        if (Instance == null)
-            Instance = this;
+        if (instance == null)
+            instance = this;
         else
             Destroy(gameObject);
 
@@ -63,5 +65,15 @@ public class UIManager : MonoBehaviour
         pauseMenu.SetActive(false);
 
         Time.timeScale = 1;
+    }
+
+    public void SetBossHealth(float health)
+    {
+        bossHealthBar.maxValue = health;
+    }
+
+    public void UpdateBossHealth(float health)
+    {
+        bossHealthBar.value = health;
     }
 }
