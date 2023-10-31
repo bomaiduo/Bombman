@@ -123,7 +123,7 @@ public class Enemy : MonoBehaviour
 
     public void OnTriggerStay2D(Collider2D collision)
     {
-        if (!attackList.Contains(collision.transform) && !hasBomb && !isDead)
+        if (!attackList.Contains(collision.transform) && !hasBomb && !isDead && !GameManager.Instance.gameOver)
         {
             attackList.Add(collision.transform); 
         }
@@ -136,7 +136,7 @@ public class Enemy : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(!isDead)
+        if(!isDead && !GameManager.Instance.gameOver)
             StartCoroutine(OnAlarm());
     }
 

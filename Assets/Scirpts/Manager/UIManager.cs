@@ -8,6 +8,7 @@ public class UIManager : MonoBehaviour
     public static UIManager instance;
 
     public GameObject healthBar;
+    public GameObject gameOverPanel;
 
     [Header("UI ELements")]
     public GameObject pauseMenu;
@@ -75,5 +76,10 @@ public class UIManager : MonoBehaviour
     public void UpdateBossHealth(float health)
     {
         bossHealthBar.value = health;
+    }
+
+    public void GameOverUI(bool playerDead)
+    {
+        gameOverPanel.SetActive(playerDead);
     }
 }
