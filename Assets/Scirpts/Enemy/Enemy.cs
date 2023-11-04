@@ -36,6 +36,8 @@ public class Enemy : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         alarmSigh = transform.GetChild(0).gameObject;
+
+        GameManager.instance.IsEnemy(this);
     }
 
     public void Awake()
@@ -56,7 +58,11 @@ public class Enemy : MonoBehaviour
     {
         anim.SetBool("dead", isDead);
         if (isDead)
+        {
+            GameManager.instance.EnemyDead(this);
             return;
+        }
+          
 
         currentState.OnUpdate(this);
         anim.SetInteger( "state", animState);
@@ -123,7 +129,7 @@ public class Enemy : MonoBehaviour
 
     public void OnTriggerStay2D(Collider2D collision)
     {
-        if (!attackList.Contains(collision.transform) && !hasBomb && !isDead && !GameManager.Instance.gameOver)
+        if (!attackList.Contains(collision.transform) && !hasBomb && !isDead && !GameManager.instance.gameOver)
         {
             attackList.Add(collision.transform); 
         }
@@ -136,7 +142,7 @@ public class Enemy : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(!isDead && !GameManager.Instance.gameOver)
+        if(!isDead && !GameManager.instance.gameOver)
             StartCoroutine(OnAlarm());
     }
 

@@ -5,20 +5,24 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager Instance;
+    public static GameManager instance;
     
     private PlayerController player;
+    private Door doorExit;
 
     public bool gameOver;
 
+    public List<Enemy> enemies = new List<Enemy>();
+
     public void Awake()
     {
-        if (Instance == null)
-            Instance = this;
+        if (instance == null)
+            instance = this;
         else
-            Destroy(Instance);
+            Destroy(instance);
 
         player = FindObjectOfType<PlayerController>();
+        doorExit = FindObjectOfType<Door>();
     }
 
     public void Update()
@@ -27,6 +31,20 @@ public class GameManager : MonoBehaviour
         UIManager.instance.GameOverUI(gameOver);
     }
 
+    public void IsEnemy(Enemy enemy)
+    {
+        enemies.Add(enemy);
+    }
+
+    public void EnemyDead(Enemy enemy)
+    {
+        enemies.Remove(enemy);
+
+        if(enemies.Count == 0)
+        {
+            doorExit.OpenDoor();
+        }
+    }
     public void RestartScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
