@@ -19,7 +19,7 @@ public class GameManager : MonoBehaviour
         if (instance == null)
             instance = this;
         else
-            Destroy(instance);
+            Destroy(gameObject);
 
         player = FindObjectOfType<PlayerController>();
         doorExit = FindObjectOfType<Door>();
@@ -48,5 +48,10 @@ public class GameManager : MonoBehaviour
     public void RestartScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void NextLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
     }
 }

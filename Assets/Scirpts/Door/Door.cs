@@ -26,6 +26,7 @@ public class Door : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             //Game Manager Got Next Room
+            GameManager.instance.NextLevel();
         }
     }
 }

@@ -37,7 +37,7 @@ public class Enemy : MonoBehaviour
         anim = GetComponent<Animator>();
         alarmSigh = transform.GetChild(0).gameObject;
 
-        GameManager.instance.IsEnemy(this);
+       
     }
 
     public void Awake()
@@ -51,6 +51,8 @@ public class Enemy : MonoBehaviour
         TransitionToState(patrolState);
         if(isBoss)
             UIManager.instance.SetBossHealth(health);
+
+        GameManager.instance.IsEnemy(this);
     }
 
     // Update is called once per frame
