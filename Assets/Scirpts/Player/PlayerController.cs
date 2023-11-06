@@ -39,6 +39,9 @@ public class PlayerController : MonoBehaviour,IDamageable
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+
+        health = GameManager.instance.LoadHealth();
+        UIManager.instance.UpdateHealth(health);
     }
 
     // Update is called once per frame

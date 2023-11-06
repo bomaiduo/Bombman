@@ -27,6 +27,7 @@ public class Door : MonoBehaviour
         {
             //Game Manager Got Next Room
             GameManager.instance.NextLevel();
+            GameManager.instance.SaveData();
         }
     }
 }
