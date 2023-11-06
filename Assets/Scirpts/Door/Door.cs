@@ -12,6 +12,7 @@ public class Door : MonoBehaviour
         anim = GetComponent<Animator>();
         coll = GetComponent<BoxCollider2D>();
 
+        GameManager.instance.IsExitDoor(this);
         coll.enabled = false;
     }
 

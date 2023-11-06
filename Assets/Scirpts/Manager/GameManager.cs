@@ -21,13 +21,15 @@ public class GameManager : MonoBehaviour
         else
             Destroy(gameObject);
 
-        player = FindObjectOfType<PlayerController>();
-        doorExit = FindObjectOfType<Door>();
+      /*  player = FindObjectOfType<PlayerController>();
+        doorExit = FindObjectOfType<Door>();*/
     }
 
     public void Update()
     {
-        gameOver = player.isDead;
+        if (player != null) 
+            gameOver = player.isDead;
+
         UIManager.instance.GameOverUI(gameOver);
     }
 
@@ -44,6 +46,16 @@ public class GameManager : MonoBehaviour
         {
             doorExit.OpenDoor();
         }
+    }
+
+    public void IsPlayer(PlayerController controller)
+    {
+        player = controller;
+    }
+
+    public void IsExitDoor(Door door)
+    {
+        doorExit = door;
     }
     public void RestartScene()
     {
