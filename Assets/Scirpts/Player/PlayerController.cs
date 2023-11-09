@@ -122,7 +122,10 @@ public class PlayerController : MonoBehaviour,IDamageable
 
     public void ButtonJump()
     {
-        canJump = true;
+        if(isGround)
+        {
+            canJump = true;
+        }
     }
 
     public void Attack()
