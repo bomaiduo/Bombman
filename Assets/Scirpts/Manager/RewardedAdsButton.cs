@@ -7,73 +7,73 @@ public class RewardedAdsButton : MonoBehaviour, IUnityAdsLoadListener, IUnityAds
     [SerializeField] Button _showAdButton;
     [SerializeField] string _androidAdUnitId = "Rewarded_Android";
     [SerializeField] string _iOSAdUnitId = "Rewarded_iOS";
-    string _adUnitId = null; // 对于不受支持的平台，此值将保持为 null
+    string _adUnitId = null; // This will remain null for unsupported platforms
 
     void Awake()
     {
-        // 获取当前平台的 Ad Unit ID（广告单元 ID）：
+        // Get the Ad Unit ID for the current platform:
 #if UNITY_IOS
         _adUnitId = _iOSAdUnitId;
 #elif UNITY_ANDROID
         _adUnitId = _androidAdUnitId;
 #endif
 
-        // 在准备好展示广告之前禁用该按钮：
+        // Disable the button until the ad is ready to show:
         _showAdButton.interactable = false;
     }
 
-    // 将内容加载到广告单元中：
+    // Call this public method when you want to get an ad ready to show.
     public void LoadAd()
     {
-        // 重要！仅在初始化之后再加载内容（在此示例中，初始化在另一个脚本中处理）。
+        // IMPORTANT! Only load content AFTER initialization (in this example, initialization is handled in a different script).
         Debug.Log("Loading Ad: " + _adUnitId);
         Advertisement.Load(_adUnitId, this);
     }
 
-    // 如果广告加载成功，请向按钮添加监听器并启用它：
+    // If the ad successfully loads, add a listener to the button and enable it:
     public void OnUnityAdsAdLoaded(string adUnitId)
     {
         Debug.Log("Ad Loaded: " + adUnitId);
 
         if (adUnitId.Equals(_adUnitId))
         {
-            // 配置该按钮在单击时调用 ShowAd() 方法：
+            // Configure the button to call the ShowAd() method when clicked:
             _showAdButton.onClick.AddListener(ShowAd);
-            // 允许用户点击按钮：
+            // Enable the button for users to click:
             _showAdButton.interactable = true;
         }
     }
 
-    // 实现当用户点击按钮时执行的方法：
+    // Implement a method to execute when the user clicks the button:
     public void ShowAd()
     {
-        // 禁用该按钮：
+        // Disable the button:
         _showAdButton.interactable = false;
-        // 然后展示广告：
+        // Then show the ad:
         Advertisement.Show(_adUnitId, this);
     }
 
-    // 实现 Show Listener 的 OnUnityAdsShowComplete 回调方法来判断用户是否获得奖励：
+    // Implement the Show Listener's OnUnityAdsShowComplete callback method to determine if the user gets a reward:
     public void OnUnityAdsShowComplete(string adUnitId, UnityAdsShowCompletionState showCompletionState)
     {
         if (adUnitId.Equals(_adUnitId) && showCompletionState.Equals(UnityAdsShowCompletionState.COMPLETED))
         {
             Debug.Log("Unity Ads Rewarded Ad Completed");
-            // 给予奖励。
+            // Grant a reward.
         }
     }
 
-    // 实现 Load 和 Show Listener 错误回调：
+    // Implement Load and Show Listener error callbacks:
     public void OnUnityAdsFailedToLoad(string adUnitId, UnityAdsLoadError error, string message)
     {
         Debug.Log($"Error loading Ad Unit {adUnitId}: {error.ToString()} - {message}");
-        // 使用错误详细信息来确定是否要尝试加载另一个广告。
+        // Use the error details to determine whether to try to load another ad.
     }
 
     public void OnUnityAdsShowFailure(string adUnitId, UnityAdsShowError error, string message)
     {
         Debug.Log($"Error showing Ad Unit {adUnitId}: {error.ToString()} - {message}");
-        // 使用错误详细信息来确定是否要尝试加载另一个广告。
+        // Use the error details to determine whether to try to load another ad.
     }
 
     public void OnUnityAdsShowStart(string adUnitId) { }
@@ -81,7 +81,7 @@ public class RewardedAdsButton : MonoBehaviour, IUnityAdsLoadListener, IUnityAds
 
     void OnDestroy()
     {
-        // 清理按钮的监听器：
+        // Clean up the button listeners:
         _showAdButton.onClick.RemoveAllListeners();
     }
 }

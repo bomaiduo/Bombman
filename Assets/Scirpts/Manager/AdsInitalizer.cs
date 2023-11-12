@@ -10,10 +10,10 @@ public class AdsInitializer : MonoBehaviour, IUnityAdsInitializationListener
 
     void Awake()
     {
-        Advertisement.Initialize(_gameId, false, this);
+        InitializeAds();
     }
 
- /*   public void InitializeAds()
+    public void InitializeAds()
     {
 #if UNITY_IOS
             _gameId = _iOSGameId;
@@ -24,9 +24,10 @@ public class AdsInitializer : MonoBehaviour, IUnityAdsInitializationListener
 #endif
         if (!Advertisement.isInitialized && Advertisement.isSupported)
         {
-            Advertisement.Initialize(_gameId, _testMode, true, this);
+            Advertisement.Initialize(_gameId, _testMode, this);
         }
-    }*/
+    }
+
 
     public void OnInitializationComplete()
     {
